@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>김희애 포트폴리오</title>
+    <!-- <link rel="shortcut icon" href="./img/favicon.png" /> -->
+    <!-- 파비콘 제작해서 추가 -->
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <!--<link rel="stylesheet" type="text/css" href="./css/examples.css" />-->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/modernizr.custom.min.js"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-ui-1.12.0.custom.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="./js/examples.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="js/mixFilter.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c5fe816e88.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var wd = parseInt($(window).width());
+        if (wd >= 770) {
+          $("#fullpage").fullpage({
+            sectionsColor: [
+              "#fff",
+              "#e6ebf1",
+              "#fff",
+              "#fff",
+              "#fff",
+              "#fff",
+              "#fff",
+              "#fff",
+              "#fff",
+              "#fff",
+            ],
+            anchors: [
+              "firstPage",
+              "secondPage",
+              "3rdPage",
+              "4thpage",
+              "5thpage",
+              "6thpage",
+              "7thpage",
+              "8thpage",
+              "9thpage",
+              "10thpage",
+              "lastPage",
+            ],
+            menu: "#menu",
+            afterLoad: function (anchorLink, index) {
+              //section 2
+              if (index == 2) {
+                //moving the image
+                $("#section1").find(".occupy").delay(1000).animate(
+                  {
+                    left: "0%",
+                  },
+                  1000,
+                  "easeOutExpo"
+                );
+              }
+              //section 3
+              if (anchorLink == "3rdPage") {
+                //moving the image
+                $("#section2").find(".intro").delay(0).animate(
+                  {
+                    left: "0%",
+                  },
+                  500,
+                  "easeOutExpo"
+                );
+              }
+            },
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="menubox">
+      <ul id="menu">
+        <li data-menuanchor="firstPage">
+          <a href="#firstPage" onfocus="this.blur();">INTRO</a>
+        </li>
+        <li data-menuanchor="secondPage">
+          <a href="#secondPage" onfocus="this.blur();">PROFILE</a>
+        </li>
+        <li data-menuanchor="3rdPage">
+          <a href="#3rdPage" onfocus="this.blur();">PORTFOLIO</a>
+        </li>
+      </ul>
+    </div>
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <h1>Portfolio</h1>
+        <p>KIM HEEAE PORTFOLIO</p>
+        <div id="scroll">
+          <img src="img/scrolldown.gif" width="30" height="auto" />
+          <h6>scroll down</h6>
+        </div>
+      </div>
+
+      <div class="section" id="section1">
+        <div id="profile">
+          <div class="prof1">
+            <ul>
+              <h2>Profile</h2>
+              <h3>김희애 (KIM HEEAE)</h3>
+              <li class="icon">
+                <img src="img/User_perspective_matte.png" alt="" />1994.05.02
+              </li>
+              <li class="icon">
+                <img src="img/Tablet_perspective_matte.png" alt="" />010.6645.4428
+              </li>
+              <li class="icon">
+                <img src="img/Envelope_perspective_matte.png" alt="" />tr4428@gmail.com
+              </li>
+              <li class="icon">
+                <img src="img/Bank_perspective_matte.png" alt="" />경상대학교 식품공학과
+              </li>
+            </ul>
+            <li class="profile_img"><img src="img/profile.JPG" alt="" /></li>
+          </div>
+          <div class="prof2">
+            <div class="list1">
+              <p>
+                <span class="title">자 격 증</span
+                ><span class="content"
+                  >GTQ 포토샵 1급, GTQi 일러스트 1급, ITQ 한글엑셀 A등급
+                  엑셀</span
+                >
+              </p>
+
+              <p>
+                <span class="title">교육사항</span
+                ><span class="content"
+                  >2022.04~2022.08 [과정평가형]
+                  웹디자인기능사(웹퍼블리셔,프론트앤드)취득과정
+                  [그린컴퓨터아트학원 수료]</span
+                >
+              </p>
+
+              <!-- <p>
+                <span class="title">경력사항</span
+                ><span class="content"
+                  >2018.08~2019.12 EBS 방송 출현 <br />2018.01~2022.08 자이언트
+                  펭TV 출현
+                </span>
+              </p> -->
+            </div>
+            <div class="list23">
+              <div class="list2">
+                <h4 class="title">Software Skills</h4>
+                <div class="skill">
+                  <div id="ai">
+                    <p>Illustrator</p>
+                    <div class="bar">
+                      <div class="fullbar">
+                        <div class="occupy"><span>70%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ps">
+                    <p>Photoshop</p>
+                    <div class="bar">
+                      <div class="fullbar">
+                        <div class="occupy"><span>80%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ht">
+                    <p>HTML/CSS</p>
+                    <div class="bar">
+                      <div class="fullbar">
+                        <div class="occupy"><span>75%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ja">
+                    <p>Javascript</p>
+                    <div class="bar">
+                      <div class="fullbar">
+                        <div class="occupy"><span>60%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="jq">
+                    <p>JQuery</p>
+                    <div class="bar">
+                      <div class="fullbar">
+                        <div class="occupy"><span>60%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ms">
+                    <p>MS Office</p>
+                    <div class="bar">
+                      <div class="fullbar">
+                        <div class="occupy"><span>80%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  ms   -->
+                </div>
+                <!-- skill  -->
+              </div>
+              <!-- list2 -->
+              <div class="list3">
+                <div class="hobby">
+                  <h4 class="title">Hobby</h4>
+                  <ul>
+                    <li><img src="./img/Compass_perspective_matte.png" alt="" />여행</li>
+                    <li><img src="./img/Image_perspective_matte.png" alt="" />전시관람</li>
+                    <li><img src="./img/Video_camera_perspective_matte.png" alt="" />영화관람</li>
+                    <li><img src="./img/Camera_perspective_matte.png" alt="" />사진찍기</li>
+                    <li><img src="./img/Burger_perspective_matte.png" alt="" />맛집탐방</li>
+                  </ul>
+                </div>
+                <div class="pers">
+                  <h4 class="title2">Personality</h4>
+                  <div id="per1">
+                    <p class="left">외향적</p>
+                    <div class="bar2">
+                      <div class="fullbar2">
+                        <div class="occupy2"></div>
+                      </div>
+                    </div>
+                    <p class="right">내향적</p>
+                  </div>
+                  <div id="per2">
+                    <p class="left">이성적</p>
+                    <div class="bar2">
+                      <div class="fullbar2">
+                        <div class="occupy2"></div>
+                      </div>
+                    </div>
+                    <p class="right">감성적</p>
+                  </div>
+                  <div id="per3">
+                    <p class="left">능동적</p>
+                    <div class="bar2">
+                      <div class="fullbar2">
+                        <div class="occupy2"></div>
+                      </div>
+                    </div>
+                    <p class="right">수동적</p>
+                  </div>
+                  <!--  per3  -->
+                </div>
+                <!-- list3 -->
+              </div>
+              <!--  list23 -->
+            </div>
+            <!-- prof2  -->
+          </div>
+          <!--  profile  -->
+        </div>
+        <!--  section1  -->
+      </div>
+      <div class="section" id="section2">
+        <div class="intro">
+          <div class="art">
+            <h2>PORTFOLIO</h2>
+            <div class="filterWrap">
+              <button class="filter" data-filter="all">All</button>
+              <button class="filter" data-filter=".web">WEB</button>
+              <button class="filter" data-filter=".responsive">
+                RESPONSIVE
+              </button>
+              <button class="filter" data-filter=".mobile">MOBILE</button>
+            </div>
+          </div>
+          <div class="container" id="mixItUp">
+            <div class="mix responsive" id="d1" data-myorder="1">
+              <img src="img/colette.png" alt="" class="d_img" />
+              <div class="po_title">
+                <h3 class="sum_tit">콜레트(화장품 브랜드)</h3>
+                <p class="discription">
+                  기존의 분위기과 개성을 살려 브랜드정보와 상세한 제품정보
+                  안내한 디자인
+                </p>
+                <p class="size">Responsive Web</p>
+                <p class="program">
+                  Photoshop/Illustrator/Figma/HTML/CSS/JQuery
+                </p>
+                <a
+                  href="http://hheeaaee.github.io/colette/"
+                  target="new"
+                  class="ov_img"
+                  ><img src="./img/link.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="mix web" id="d2" data-myorder="2">
+              <img src="img/eggcellent.png" alt="" class="d_img" />
+              <div class="po_title">
+                <h3 class="sum_tit">에그셀런트(식품 브랜드)</h3>
+                <p class="discription">
+                  색채감있고 귀여운 이미지를 강조하여 깔끔한 디자인
+                </p>
+                <p class="size">web site(1920X1080)</p>
+                <p class="program">
+                  Photoshop/Illustrator/Figma/HTML/CSS/JQuery
+                </p>
+                <a
+                  href="http://hheeaaee.github.io/eggcellent/"
+                  target="new"
+                  class="ov_img"
+                  ><img src="./img/link.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="mix responsive" id="d3" data-myorder="3">
+              <img src="img/ggglog.png" alt="" class="d_img" />
+              <div class="po_title">
+                <h3 class="sum_tit">공간기록(건축)</h3>
+                <p class="discription">
+                  스크롤을 이용한 기업정보제공 중심 사이트
+                </p>
+                <p class="size">Responsive Web</p>
+                <p class="program">
+                  Photoshop/Illustrator/Figma/HTML/CSS/JQuery
+                </p>
+                <a
+                  href="http://hheeaaee.github.io/ggglog/"
+                  target="new"
+                  class="ov_img"
+                  ><img src="./img/link.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="mix mobile" id="d4" data-myorder="4">
+              <img src="img/rosemary.png" alt="" class="d_img" />
+              <div class="po_title">
+                <h3 class="sum_tit">로즈마리(병원)</h3>
+                <p class="discription">
+                  상세한 정보와 간편하고 빠른 예약 서비스
+                </p>
+                <p class="size">Mobile</p>
+                <p class="program">
+                  Photoshop/Illustrator/Figma/HTML/CSS/JQuery
+                </p>
+                <a href="http://hheeaaee.github.io/rosemary/" target="new" class="ov_img"
+                  ><img src="./img/link.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <!-- <div class="mix responsive" id="d5" data-myorder="5">
+              <img src="img/khf.jpg" alt="" class="d_img" />
+              <div class="po_title">
+                <h3 class="sum_tit">한국문화재단(공기업)</h3>
+                <p class="discription">
+                  최신 그리드 디자인을 접목한 한국문화정보 전달 사이트
+                </p>
+                <p class="size">Responsive Web</p>
+                <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                <a
+                  href="http://pengsu.github.io/r21"
+                  target="new"
+                  class="ov_img"
+                  ><img src="./img/link.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="mix responsive" id="d6" data-myorder="6">
+              <img src="img/khf.jpg" alt="" class="d_img" />
+              <div class="po_title">
+                <h3 class="sum_tit">(관공서)</h3>
+                <p class="discription">상세설명</p>
+                <p class="size">Responsive Web</p>
+                <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                <a href="http://pengsu.github.io/d1" target="new" class="ov_img"
+                  ><img src="./img/link.png" alt="" />
+                </a>
+              </div>
+            </div> -->
+            <!--관공서추가-->
+          </div>
+        </div>
+        <div id="footer">
+          <p>COPYRIGHT &copy; 2022 KIMHEEAE ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+      <div class="section" id="section3">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/colette_bi_.png" alt="콜레트로고" />
+          </div>
+          <div class="section3_art">
+            <h2>1. 리뉴얼 프로젝트</h2><br>
+              <h2 style="margin-top: 20px;">colette 콜레트</h2>
+            <p class="url">
+              <a href="https://notrecolette.com/">
+                https://notrecolette.com/
+              </a>
+            </p>
+
+            <div class="info">
+              <p class="info_discription">
+                뷰티 제품 브랜드.<br />
+                프랑스 작가 콜레트를 모티브로 주체적인 여성의 표현을 위한 지지
+                브랜드
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/colette_main.PNG" alt="콜레트메인" />
+            <img src="img/colette_main1.PNG" alt="콜레트메인1" />
+            <img src="img/colette_main2.PNG" alt="콜레트메인2" />
+          </div>
+          <div class="before_right">
+            문제점
+            <p>
+              1. 풀페이지 영상을 통해 브랜드의 분위기를 알 수 있으나<br />
+              특성과 정보를 알기 어려움.
+            </p>
+            <p>2. 새로운 제품인지 한눈에 알기 어려움.</p>
+            <p>
+              3. 메인페이지에 제품나열을 통해 접근성은 쉬우나<br />
+              단순한 나열로 인해 정보를 알기 어려움.
+            </p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>브랜드 이미지 특성이 잘 들어나지만 구매욕구 ↓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section4">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_deeponde.jpg" alt="디폰데로고" />
+          </div>
+          <div class="section3_art">
+            <h2>1. 벤치마킹</h2><br>
+            <h2 style="margin-top: 15px;">deeponde 디폰데</h2>
+            <p class="url">
+              <a href="https://deeponde.com/"> https://deeponde.com/ </a>
+            </p>
+            <div class="info">
+              <p class="info_discription">
+                뷰티 제품 브랜드.<br />
+                동양미 전통 아름다움을 바탕으로 현대적 재해석 표현 브랜드.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/deeponde_main.PNG" alt="디폰데메인" />
+            <img src="img/deeponde_main1.PNG" alt="디폰데메인1" />
+            <img src="img/deeponde_main2.PNG" alt="디폰데메인2" />
+            <img src="img/deeponde_main3.PNG" alt="디폰데메인3" />
+          </div>
+          <div class="before_right">
+            특성
+            <p>1. 슬라이드와 메인메이지에서 제품 아이덴티티를 잘 들어냄.</p>
+            <p>2. 리뷰창을 통해 제품정보를 알 수 있음.</p>
+            <p>3. 제품상세페이지에서 제품의 정보들을 상세히 알 수 있음.</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>브랜드 이미지 특성이 잘드러나면서 <br />
+                  정보와 리뷰로 구매욕구 ↑
+                </p></p>
+              </div>
+            </div>
+            <div>
+              <div class="link_result">
+                <a
+                  href="http://hheeaaee.github.io/colette/"
+                  target="new"
+                  class="ov_img"
+                >
+                  <p>작업결과 →</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section5">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_eggcellent.png" class="logo_eggcellent"
+            alt="에그셀런트로고" / >
+          </div>
+          <div class="section3_art">
+            <h2>2. 리뉴얼 프로젝트</h2><br>
+            <h2 style="margin-top: 15px;">eggcellent 에그셀런트</h2>
+            <p class="url">
+              <a href="http://www.eggcellent.co.kr/">
+                http://www.eggcellent.co.kr/
+              </a>
+            </p>
+
+            <div class="info">
+              <p class="info_discription">
+                식품 브랜드.<br />
+                에그 샌드위치 전문점.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/eggcellent_main.PNG" alt="에그셀런트메인" />
+          </div>
+          <div class="before_right">
+            문제점
+            <p>
+              1. 창업, 가맹위주의 홈페이지로<br />&nbsp;&nbsp;&nbsp;다양한
+              유저를 생각하지 않은 홈페이지
+            </p>
+            <p>2. 서브메뉴 없는 메인페이지</p>
+            <p>3. 소비자 유저들은 브랜드 정보 얻기 어려움.</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>정리되지 않은 메인과
+                  다양한 유저수용 ↓
+                </p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section6">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_eggdrop.png" alt="에그드랍로고" />
+          </div>
+          <div class="section3_art">
+            <h2>2. 벤치마킹</h2><br>
+            <h2 style="margin-top: 15px;">EGGDROP 에그드랍</h2>
+            <p class="url">
+              <a href="https://eggdrop.co.kr/"> https://eggdrop.co.kr/ </a>
+            </p>
+            <div class="info">
+              <p class="info_discription">
+                식품 브랜드.<br />
+                에그 샌드위치 전문점.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/eggdrop_main.PNG" alt="에그드랍메인" />
+            <img src="img/eggdrop_main1.PNG" alt="에그드랍메인1" />
+            <img src="img/eggdrop_main2.PNG" alt="에그드랍메인2" />
+          </div>
+          <div class="before_right">
+            특성
+            <p>1. 깔끔하고 정리된 디자인.</p>
+            <p>2. 다양한 유저수용 가능.</p>
+            <p>3. 2022 IDEA 디자인 어워드 수상.</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>브랜드 이미지 특성이
+                  잘드러나면서 <br />
+                  누구나 이용가능.
+                </p></p>
+              </div>
+            </div>
+            <div>
+              <div class="link_result">
+                <a
+                  href="http://hheeaaee.github.io/eggcellent/"
+                  target="new"
+                  class="ov_img"
+                >
+                  <p>작업결과 →</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section7">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_ggglog.jpg" alt="공간기록로고" / >
+          </div>
+          <div class="section3_art">
+            <h2>3. 리뉴얼 프로젝트</h2><br>
+            <h2 style="margin-top: 15px;">공간기록</h2>
+            <p class="url">
+              <a href="https://ggglog.com/"> https://ggglog.com/ </a>
+            </p>
+
+            <div class="info">
+              <p class="info_discription">
+                건축 기업 브랜드.<br />
+                건설과 건축사무소와 협업하여 소비자 니즈에 맞게 하우스건설업체
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/ggglog_main.PNG" alt="공간기록메인" />
+            <img src="img/ggglog_main1.PNG" alt="공간기록메인1" />
+          </div>
+          <div class="before_right">
+            문제점
+            <p>1. 건축회사라는 이미지가 드러나지 않음.</p>
+            <p>2. 기업 특성을 알기 어려움</p>
+            <p>3. 브랜드 이미지만 초점을 맞춘 디자인.</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>기업 정보와 소개 파악률
+                  ↓
+                </p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section8">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_seoilfilm.png" alt="서일필름로고" />
+          </div>
+          <div class="section3_art">
+            <h2>3. 벤치마킹</h2><br>
+            <h2 style="margin-top: 15px;">서일필름</h2>
+            <p class="url">
+              <a href="http://www.seoilfilm.com/">
+                http://www.seoilfilm.com/
+              </a>
+            </p>
+            <div class="info">
+              <p class="info_discription">
+                기업 브랜드.<br />
+                알루미늄 제조업.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <!-- <img src="img/seoilfilm_main.png" alt="서일필름메인" /> -->
+            <img src="img/seoilfilm_main1.PNG" alt="서일필름메인1" />
+          </div>
+          <div class="before_right">
+            특성
+            <p>1. 깔끔하고 정리된 풀페이지 디자인.</p>
+            <p>2. 기업의 비전과 목표 파악용이.</p>
+            <p>3. 전체적으로 기업의 특성 드러남.</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>기업의 비전과 목표,
+                  제품 파악 용이한 디자인.
+                </p></p>
+              </div>
+            </div>
+            <div>
+              <div class="link_result">
+                <a
+                  href="http://hheeaaee.github.io/ggglog/"
+                  target="new"
+                  class="ov_img"
+                >
+                  <p>작업결과 →</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section9">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_roesmary.png" alt="로즈마리로고" / >
+          </div>
+          <div class="section3_art">
+            <h2>4. 모바일 리뉴얼 프로젝트</h2><br>
+            <h2 style="margin-top: 15px;">로즈마리 여성병원(모바일)</h2>
+            <p class="url">
+              <a href="https://http://rmh.co.kr/"> 홈페이지(pc) : https://rmh.co.kr/ </a>
+            </p>
+
+            <div class="info">
+              <p class="info_discription">
+                여성병원.<br />
+                여성과 아동 진료. 산부인과 산후조리 클리닉센터.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/rosemary_main.PNG" alt="로즈마리메인" />
+            <img src="img/rosemary_main1.PNG" alt="로즈마리메인1" />
+            <img src="img/rosemary_main2.PNG" alt="로즈마리메인1" />
+            <img src="img/rosemary_main3.PNG" alt="로즈마리메인1" />
+          </div>
+          <div class="before_right">
+            문제점
+            <p>1. 병원브랜드의 컬러와 앱컬러의 부자연스러움.</p>
+            <p>2. 병원에 대한 정보가 충분하지 않음.</p>
+            <p>3. 병원정보는 홈페이지로 봐야하는 번거로움이 있음.</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>부족한 병원 정보와
+                  통일되지 않은 디자인.
+                </p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section10">
+        <div class="intro">
+          <div class="_logo">
+            <img src="img/logo_sm.png" alt="성모병원로고" />
+          </div>
+          <div class="section3_art">
+            <h2>4. 벤치마킹</h2><br>
+            <h2 style="margin-top: 15px;">대전 성모병원</h2>
+            <p class="url">
+              <a href="https://www.cmcdj.or.kr/">홈페이지(pc) : https://www.cmcdj.or.kr/ </a>
+            </p>
+            <div class="info">
+              <p class="info_discription">
+                종합 병원.<br />
+                천주교 교리를 기반으로 설립된 종합 병원.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="before">
+          <div class="before_left">
+            <img src="img/sm_main.PNG" alt="성모병원메인" />
+            <img src="img/sm_main1.PNG" alt="성모병원메인1" />
+          </div>
+          <div class="before_right">
+            특성
+            <p>1. 같은 계열의 컬러 디자인.</p>
+            <p>2. 버튼형식의 간단한 메뉴</p>
+            <p>3. 상세한 병원정보와 유익한 건강정보</p>
+            <div class="info_icon_wrap">
+              <div class="info_icon">
+                <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;
+              </div>
+              <div class="info_icon_txt">
+                <p>깔끔한 디자인과
+                  편리하고 간편한 예약
+                </p></p>
+              </div>
+            </div>
+            <div>
+              <div class="link_result">
+                <a
+                  href="http://hheeaaee.github.io/rosemary/"
+                  target="new"
+                  class="ov_img"
+                >
+                  <p>작업결과 →</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>
+</html>

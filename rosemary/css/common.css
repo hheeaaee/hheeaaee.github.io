@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 1.1px;
+  color: #262626;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+ul,
+li {
+  list-style: none;
+}
+
+label,
+input,
+button {
+  border: 0;
+  outline: 0;
+  background-image: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}

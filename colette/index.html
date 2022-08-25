@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <!-- 아이폰 계열의 웹앱 설정 -->
+    <meta name="apple-mobile-web-app-title" content="COLETTE" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 공통 웹앱 검색엔진의 검색 결과 설정-->
+    <meta name="description" content="COLETTE" />
+    <meta name="keyword" content="COLETTE" />
+    <!-- SNS에 의한 검색결과 설정 -->
+    <!-- <meta itemprop="name" content="COLETTE" /> <meta itemprop="description"
+        content="COLETTE" /> -->
+
+    <!-- 페이스북 연동 설정 -->
+    <meta property="fb:app_id" content="APP_ID" />
+    <!-- 페이스북, 트위터, 카카오톡의 크롤러 연동 설정 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="COLETTE" />
+    <meta property="og:description" content="COLETTE" />
+    <meta property="og:keyword" content="COLETTE" />
+    <meta property="og:image" content="image/favicon/ogthumb.png" />
+    <meta property="og:url" content="http://hheeaaee.github.io/colette" />
+
+    <!-- 메타포 아이콘 설정 -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="image/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="image/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="image/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="image/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="image/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="image/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="image/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="image/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="image/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="image/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="image/favicon/favicon-16x16.png"
+    />
+    <title>colette</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <script src="js/js.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a20758221d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c5fe816e88.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="image/favicon/favicon.png" />
+
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        /*
+      변수 지정하기
+      문서의 높이를 계산하고 원하는  부분이 상단에서 얼마큼 떨어져 있는지 offset 값 계산하기
+      스크롤 과 클릭 이벤트 작성
+      */
+        var btt = document.querySelector("#back_to_top"),
+          docElem = document.documentElement,
+          scrollAmount;
+
+        //스크롤 이벤트 추가
+        window.addEventListener("scroll", function () {
+          //scrollAmount=docElem.scrollTop;
+          scrollAmount = this.pageYOffset; //페이지 세로의 거리
+
+          console.log(scrollAmount); //콘솔창에 보이기
+          if (scrollAmount > 300) {
+            //btt.classList.add('.visible');
+            btt.className = "visible";
+          } else {
+            btt.classList.remove("visible");
+          }
+        });
+        //클릭이벤트 추가
+        btt.addEventListener("click", function (e) {
+          e.preventDefault(); //이벤트를 처리하지 않는 경우, 해당 이벤트에 대한 사용자의 기본동작을 실행하지 않도록 지정. a태그를 클릭하면 href를 통해서 이동하거나 맨 위로 올라가거나,새로고침 되거나 하는 동작을 막아줌
+          var scrollInterval = setInterval(function () {
+            if (scrollAmount != 0) {
+              window.scrollBy(0, -55);
+            } else {
+              clearInterval(scrollInterval);
+            }
+          }, 5);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="top-area">
+        <div class="logo-wrap">
+          <div class="log">
+            <a href="#">Login</a>
+            <span class="dot1"></span>
+            <a href="#">Sign in</a>
+          </div>
+          <div class="logo-img">
+            <a href="index.html">
+              <img src="./image/main/colette_bi_.png" alt="colette" />
+            </a>
+          </div>
+          <div class="basket">
+            <a href="#"
+              >장바구니
+              <span class="count">0</span>
+            </a>
+          </div>
+          <div class="toggle">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <div class="sidebar">
+              <div class="sidebar_inner">
+                <div class="sidebar-top-area">
+                  <div class="logo">
+                    <a href="index.html">
+                      <img src="./image/main/colette_bi_.png" alt="colette" />
+                    </a>
+                  </div>
+                  <div class="btn-login">
+                    <ul>
+                      <li>
+                        <a href="#">Login</a>
+                        <span class="dot1"></span>
+                      </li>
+                      <li>
+                        <a href="#">Sign in</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="line_bx"></div>
+                </div>
+                <div class="sidebar-menu">
+                  <ul>
+                    <li>
+                      <a href="#">ABOUT</a>
+                    </li>
+                    <li class="sidebar-menu1 menu">
+                      <a href="#">SHOP</a>
+                      <ul class="sidebar-menu-small1 sidebar-menu-small">
+                        <li>
+                          <a href="#">All</a>
+                        </li>
+                        <li>
+                          <a href="#">LIP</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-menu2 menu">
+                      <a href="#">CHAPTER</a>
+                      <ul class="sidebar-menu-small2 sidebar-menu-small">
+                        <li>
+                          <a href="#">COLLECTION</a>
+                        </li>
+                        <li>
+                          <a href="#">FILM</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-menu3 menu">
+                      <a href="#">ACCOUNT</a>
+                      <ul class="sidebar-menu-small3 sidebar-menu-small">
+                        <li>
+                          <a href="#">CS CENTER</a>
+                        </li>
+                        <li>
+                          <a href="#">CART</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn-login btn-login_top">
+                  <ul>
+                    <li>
+                      <a href="#">Notice</a>
+                      <span class="dot1"></span>
+                    </li>
+                    <li>
+                      <a href="#">QnA</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="line_bx"></div>
+                </div>
+                <div class="banner">
+                  <a href="#">
+                    <strong>Welcome Coupon</strong>
+                    <span>지금 가입하고 회원만의 혜택을 받아보세요.</span>
+                    <em>
+                      -
+                      <i class="fa-solid fa-won-sign"></i>3,000</em
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cate-wrap">
+          <div class="inner">
+            <div class="category-wrap">
+              <ul class="category">
+                <li>
+                  <a href="#">ABOUT</a>
+                </li>
+                <li>
+                  <a href="sub.html" style="border-bottom: 1px solid #000"
+                    >SHOP</a
+                  >
+                </li>
+                <li>
+                  <a href="#">CHAPTER</a>
+                </li>
+                <li>
+                  <a href="#">ACCOUNT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contents1">
+      <div class="sec4">
+        <div class="slide_con">
+          <div class="slide_over">
+            <ul class="slide">
+              <li>
+                <div class="figure">
+                  <img src="./image/main/main_slider_image1-1.jpg" alt="" />
+                  <span class="figcaption"
+                    >콜렉트의 새로운 컬렉션<br />
+                    <span class="slide_txt1">LES 17 HEURES</span><br />
+                    <span class="slide_txt1_1">DE COLETTE</span></span
+                  >
+                  <a href="#">자세히보기</a>
+                </div>
+              </li>
+              <li>
+                <div class="figure">
+                  <img src="./image/main/main_slider_image1-2.jpg" alt="" />
+                  <span class="figcaption slide_txt2_box">
+                    <span class="slide_txt2"
+                      >02 BIKINI LILAS 비키니 릴라<br />
+                      물방울이 맺힌 듯 촉촉한 라벤더</span
+                    ></span
+                  >
+                  <a
+                    href="sub.html"
+                    style="border: 3px dashed rgb(255, 255, 21)"
+                    >자세히보기</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="figure">
+                  <img src="./image/main/main_slider_image1-3.jpg" alt="" />
+                  <span class="figcaption slide_txt3_box"
+                    >NUANCES DE ROUGE<br />
+                    미묘한 뉘앙스를 더하는 기본 컬러로, 다양한 텍스처를 느껴볼
+                    수 있습니다.<br />
+                    다른 립 제품과 레이어링 하거나, 아이, 치크 등<br />다른
+                    메이크업에도 활용하여 자신만의 컬러를 표현해보세요.</span
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="figure">
+                  <img src="./image/main/main_slider_image1-4.jpg" alt="" />
+                  <span class="figcaption slide_txt4_box"
+                    >COLLECT &nbsp;YOUR &nbsp;OWN &nbsp;SHADE
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="btn_con"> <button class="prev">이전</button> <button
+                class="next">다음</button> </div> -->
+          <ul class="dot_con">
+            <!-- <li><a href="#">1</a></li> <li><a href="#">2</a></li> <li><a
+                    href="#">3</a></li> <li><a href="#">4</a></li> 제이쿼리 html추가 -->
+          </ul>
+        </div>
+      </div>
+      <div class="main_bnr_linePc">
+        <img src="./image/main/bnr_line_pc.png" alt="" />
+      </div>
+      <div class="main_bnr_line">
+        <img src="./image/main/bnr_line.png" alt="" />
+      </div>
+    </div>
+
+    <div class="main_branding_wrap">
+      <div class="main_branding1_1">
+        <span class="main_branding1_1_txt">
+          <i>Collect</i><br />My Own<br />Shade.
+        </span>
+      </div>
+      <div>
+        <span class="main_branding1_1_mintxt">
+          콜레트와 함께 여러분만의 다채로운 콜렉션을 꾸려보세요.
+        </span>
+      </div>
+      <div class="main_branding_wrap1">
+        <div class="main_branding_pc">
+          <div class="main_branding_pc1">
+            <img src="./image/main/main_branding1_2.png" alt="alt" />
+          </div>
+          <div class="main_branding_pc2">
+            <img src="./image/main/main_branding1_3.gif" alt="alt" />
+          </div>
+        </div>
+      </div>
+      <div class="main_branding_tablet">
+        <img src="./image/main/main_branding1_2(tablet).png" alt="alt" />
+      </div>
+      <div class="main_branding_tablet">
+        <img src="./image/main/main_branding1_3(tablet).gif" alt="alt" />
+      </div>
+      <div class="main_branding_tablet">
+        <img src="./image/main/main_branding1_4(tablet).png" alt="alt" />
+      </div>
+      <div class="main_branding_new">
+        <img src="./image/main/main_branding1_4.png" alt="alt" />
+      </div>
+    </div>
+
+    <div id="contents2">
+      <div class="section-title">
+        <h3>
+          <span>
+            <a href="#">
+              NEW
+              <em></em>ARRIVALS
+            </a>
+          </span>
+        </h3>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="prdImg" style="border: 3px dashed rgb(255, 255, 21)">
+              <a href="sub.html">
+                <div class="prdImg_1">
+                  <div class="prdImg_1_img"></div>
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">02 BIKINI LILAS</span><br />
+                    <span class="txt2">스틸로 봄 아 레브르 02 비키니 릴라</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_2">
+                  <!-- <img src="./image/main/main_prd_2.png" alt="06 바그 엉 꼬하이"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">06 BAGUE EN CORAIL</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 06 바그 엉 꼬하이</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_3">
+                  <!-- <img src="./image/main/main_prd_3.png" alt="02 듀스 슈미네"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">02 DOUCE CHEMINÉE</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 02 두스 슈미네</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_4">
+                  <!-- <img src="./image/main/main_prd_3.png" alt="02 듀스 슈미네"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">01 JARDIN AUX HERBES</span><br />
+                    <span class="txt2">스틸로 봄 아 레브르 01 자뎅 호제브</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="sub.html">
+                <div class="prdImg_1">
+                  <div class="prdImg_1_img">
+                    <!-- <img src="./image/main/main_prd_1.png" alt="02 비키니 릴라"> -->
+                  </div>
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">02 BIKINI LILAS</span><br />
+                    <span class="txt2">스틸로 봄 아 레브르 02 비키니 릴라</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_5">
+                  <!-- <img src="./image/main/main_prd_3.png" alt="02 듀스 슈미네"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">03 MAGNOLIA</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 03 마뇰리아</span><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_6">
+                  <!-- <img src="./image/main/main_prd_3.png" alt="02 듀스 슈미네"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">07 YODLÉ YERI ROUGE</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 07 요를예리 후즈</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_6">
+                  <!-- <img src="./image/main/main_prd_3.png" alt="02 듀스 슈미네"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">07 YODLÉ YERI ROUGE</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 07 요를예리 후즈</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_6">
+                  <!-- <img src="./image/main/main_prd_3.png" alt="02 듀스 슈미네"> -->
+                </div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">07 YODLÉ YERI ROUGE</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 07 요를예리 후즈</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="prdImg">
+              <a href="#">
+                <div class="prdImg_6"></div>
+                <div class="prdImg_txt_box">
+                  <div class="prdImg_txt">
+                    <span class="txt1">07 YODLÉ YERI ROUGE</span><br />
+                    <span class="txt2">스틸로 후즈 마뜨 07 요를예리 후즈</span
+                    ><br />
+                  </div>
+                  <div class="prdImg_txt1">
+                    <del><i class="fa-solid fa-won-sign"></i>21,000<br /></del>
+
+                    <i class="fa-solid fa-won-sign"></i>16,800<br />
+                    <span class="prdImg_txt_sale">(20%)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-wrap">
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+      </div>
+
+      <!-- Swiper JS -->
+      <script src="js/swiper.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+
+      <div class="more">
+        <a href="#"
+          >more
+          <span>+</span>
+          view</a
+        >
+      </div>
+    </div>
+
+    <div class="branding2_wrap">
+      <div class="branding2 branding2-pc">
+        <img src="./image/main/branding2.png" alt="브랜딩2-pc" />
+      </div>
+      <div class="branding2 branding2-tablet">
+        <img src="./image/main/branding2(tablet).png" alt="브랜딩2-tablet" />
+      </div>
+      <div class="main_event">
+        <img src="./image/main/main_event.png" alt="이벤트이미지" />
+      </div>
+      <div class="branding2_line_bx"></div>
+      <div class="branding2_2 branding2_2-pc">
+        <img src="./image/main/main_branding2_2.png" alt="브랜딩2_2-pc" />
+      </div>
+      <div class="branding2_2 branding2-tablet">
+        <img
+          src="./image/main/main_branding2_2(tablet).png"
+          alt="브랜딩2_2-tablet"
+        />
+      </div>
+    </div>
+
+    <div id="alph_new_board">
+      <div class="alph_review">REVIEW</div>
+      <div class="alph_img_wrap">
+        <div class="inner1">
+          <ul>
+            <li class="insta_img1">
+              <a href="#"
+                ><img src="./image/main/insta1.png" alt="인스타이미지1"
+              /></a>
+            </li>
+            <li class="insta_img2">
+              <a href="#"
+                ><img src="./image/main/insta2.png" alt="인스타이미지2"
+              /></a>
+            </li>
+            <li class="insta_img3">
+              <a href="#"
+                ><img src="./image/main/insta3.png" alt="인스타이미지3"
+              /></a>
+            </li>
+            <li class="insta_img4">
+              <a href="#"
+                ><img src="./image/main/insta4.png" alt="인스타이미지4"
+              /></a>
+            </li>
+            <li class="insta_img5">
+              <a href="#"
+                ><img src="./image/main/insta5.png" alt="인스타이미지5"
+              /></a>
+            </li>
+            <li class="insta_img6">
+              <a href="#"
+                ><img src="./image/main/insta6.png" alt="인스타이미지6"
+              /></a>
+            </li>
+            <li class="insta_img7">
+              <a href="#"
+                ><img src="./image/main/insta7.png" alt="인스타이미지6"
+              /></a>
+            </li>
+            <li class="insta_img8">
+              <a href="#"
+                ><img src="./image/main/insta8.png" alt="인스타이미지6"
+              /></a>
+            </li>
+            <li class="insta_img9">
+              <a href="#"
+                ><img src="./image/main/insta9.png" alt="인스타이미지6"
+              /></a>
+            </li>
+            <li class="insta_img10">
+              <a href="#"
+                ><img src="./image/main/insta10.png" alt="인스타이미지6"
+              /></a>
+            </li>
+            <li class="insta_img11">
+              <a href="#"
+                ><img src="./image/main/insta11.png" alt="인스타이미지6"
+              /></a>
+            </li>
+            <li class="insta_img12">
+              <a href="#"
+                ><img src="./image/main/insta12.png" alt="인스타이미지6"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="quickmenu">
+        <div class="quick1">
+          <a href="#" id="back_to_top">
+            <img src="./image/main/quickmenu.png" alt="퀵메뉴" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer_inner">
+        <div>
+          <div class="logo">
+            <img src="./image/main/colette_bi_.png" alt="colette" />
+          </div>
+          <p style="margin: 52px 0 0"></p>
+          <div class="info">
+            <p class="black-title">BLANK CORP.</p>
+            <div>대표이사. 남대광</div>
+            <div>
+              개인정보책임자.
+              <a href="mailto:privacy@blankcorp.kr" style="color: #c1b9af">
+                김대훈 프로(privacy@blankcorp.kr)</a
+              >
+            </div>
+            <div>사업자등록번호. 359-87-00301</div>
+            <div style="color: #c1b9af" class="ec">
+              통신판매업 신고번호. 제2016-서울강남-01468호
+            </div>
+            <div class="">주소. 강남구 테헤란로 311, 3층</div>
+            <div>
+              <a href="mailto:colette@blankcorp.kr" style="color: #c1b9af"
+                >colette@blankcorp.kr</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            style="
+              text-decoration: none;
+              color: #c1b9af;
+              font-size: 12px;
+              display: inline-block;
+              margin-right: 10px;
+            "
+            >이용약관</a
+          >
+          <a
+            href="#"
+            style="text-decoration: underline; color: #c1b9af; font-size: 12px"
+            >개인정보처리방침</a
+          >
+          <br />
+          <div class="copyRight">
+            Copyright &#169; COLETTE . All right reserved.
+          </div>
+        </div>
+        <div class="middle">
+          <div class="middleInner">
+            <p class="black-title">Customer Center</p>
+            <p class="phone black-title">+82 02-6951-5570</p>
+            <p class="runtime black-title">
+              평일 &nbsp;&nbsp;&nbsp;&nbsp;09:00
+              <em>-</em>
+              18:00<br />
+              lunch. 12:00
+              <em>-</em>
+              13:00<br />
+              <span>공휴일 제외</span>
+            </p>
+            <div style="margin-top: 40px">
+              <p class="black-title">Order Tracking</p>
+              <div style="margin-top: 10px">
+                <a href="#" class="gray-description">주문내역</a>
+                <br />
+                <a href="#" class="gray-description">배송조회</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="last">
+          <div>
+            <p class="black-title">QA</p>
+            <div style="margin-top: 10px">
+              <a href="#" class="gray-description">1:1 문의</a>
+            </div>
+          </div>
+          <div style="margin-top: 23px">
+            <p class="black-title">SNS</p>
+            <div
+              style="margin-top: 10px; display: flex; flex-direction: column"
+            >
+              <a href="#" class="gray-description" target="_blank">Instgram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 아이폰 계열의 웹앱 설정 -->
+    <meta name="apple-mobile-web-app-title" content="eggcellent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 공통 웹앱 검색엔진의 검색 결과 설정-->
+    <meta name="description" content="eggcellent" />
+    <meta name="keyword" content="eggcellent" />
+    <!-- SNS에 의한 검색결과 설정 -->
+    <!-- <meta itemprop="name" content="eggcellent" />
+    <meta itemprop="description" content="eggcellent" /> -->
+
+    <!-- 페이스북 연동 설정 -->
+    <meta property="fb:app_id" content="APP_ID" />
+    <!-- 페이스북, 트위터, 카카오톡의 크롤러 연동 설정 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="eggcellent" />
+    <meta property="og:description" content="eggcellent" />
+    <meta property="og:keyword" content="eggcellent" />
+    <!-- <meta property="og:image" content="image/favicon/ogthumb.png"/> -->
+    <meta property="og:url" content="http://hheeaaee.github.io/eggcellent/" />
+
+    <!-- 메타포 아이콘 설정 -->
+    <link rel="shortcut icon" href="./image/main/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="image/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="image/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="image/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="image/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="image/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="image/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="image/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="image/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="image/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="image/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="image/favicon/favicon-16x16.png"
+    />
+    <title>eggcellent</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+
+    <script src="./js/html5.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a20758221d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var $nav = $("header nav > ul > li"),
+          $sub = $("header nav > ul > li ul, .sub_bg");
+
+        $sub.hide();
+        $nav.hover(
+          function () {
+            $(".header_wrap").addClass("on");
+            $sub.stop().slideDown();
+          },
+          function () {
+            $sub.stop().slideUp(function () {
+              $(".header_wrap").removeClass("on");
+            });
+          }
+        );
+
+        var $content = $(".tab_content div");
+        var $title = $(".tab_title a");
+        $content.hide();
+        $content.eq(0).show();
+
+        $title.click(function () {
+          $title.removeClass("on");
+          $(this).addClass("on");
+
+          var $Index = $(this).index(); //.0==tab_title a:nth-child(1)==0
+          $content.fadeOut(500);
+          $content.eq($Index).fadeIn(500);
+          return false;
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        /*
+        변수 지정하기
+        문서의 높이를 계산하고 원하는 부분이 상단에서 얼마큼 떨어져 있는지 offset 값 계산하기
+        스크롤 과 클릭 이벤트 작성
+        */
+        var btt = document.querySelector("#back_to_top"),
+          docElem = document.documentElement,
+          scrollAmount;
+
+        //스크롤 이벤트
+        window.addEventListener("scroll", function () {
+          //scrollAmount = docElem.scrollTop;
+          scrollAmount = this.pageYOffset; //페이지 세로의 거리
+          console.log(scrollAmount); //콘솔창에 보이기
+          if (scrollAmount > 300) {
+            // btt.classList.add('.visible');
+            btt.className = "visible";
+          } else {
+            btt.classList.remove("visible");
+          }
+        });
+        //클릭 이벤트
+        btt.addEventListener("click", function (e) {
+          e.preventDefault(); //이벤트를 처리하지 않는 경우, 해당 이벤트에 대한 사용자의 기본동작을 실행하지 않도록 지정. a태그를 클릭하면 href를 통해서 이동하거나 맨 위로 올라가거나,새로고침되거나 하는  동작을 막아줌
+          var scrollInterval = setInterval(function () {
+            if (scrollAmount != 0) {
+              window.scrollBy(0, -55);
+            } else {
+              clearInterval(scrollInterval);
+            }
+          }, 3);
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        /*
+        변수 지정하기
+        문서의 높이를 계산하고 원하는 부분이 상단에서 얼마큼 떨어져 있는지 offset 값 계산하기
+        스크롤 과 클릭 이벤트 작성
+        */
+        var btt = document.querySelector("#back_to_top0"),
+          docElem = document.documentElement,
+          scrollAmount;
+
+        //스크롤 이벤트
+        window.addEventListener("scroll", function () {
+          //scrollAmount = docElem.scrollTop;
+          scrollAmount = this.pageYOffset; //페이지 세로의 거리
+          console.log(scrollAmount); //콘솔창에 보이기
+          if (scrollAmount > 300) {
+            // btt.classList.add('.visible');
+            btt.className = "visible";
+          } else {
+            btt.classList.remove("visible");
+          }
+        });
+
+        // //클릭 이벤트
+        // btt.addEventListener("click", function (e) {
+        //   e.preventDefault(); //이벤트를 처리하지 않는 경우, 해당 이벤트에 대한 사용자의 기본동작을 실행하지 않도록 지정. a태그를 클릭하면 href를 통해서 이동하거나 맨 위로 올라가거나,새로고침되거나 하는  동작을 막아줌
+        //   var scrollInterval = setInterval(function () {
+        //     if (scrollAmount != 0) {
+        //       window.scrollBy(0, -55);
+        //     } else {
+        //       clearInterval(scrollInterval);
+        //     }
+        //   }, 3);
+        // });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="header_wrap">
+      <header class="fixed">
+        <h1 class="logo"><a href="index.html">logo</a></h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" style="border-bottom: 4px solid #fd0">MENU</a>
+              <ul>
+                <li>
+                  <a href="sub.html" style="border-bottom: 4px solid #fd0"
+                    >NEW</a
+                  >
+                </li>
+                <li><a href="#">eggcellent's COICE</a></li>
+                <li><a href="#">SANDWICH</a></li>
+                <li><a href="#">SIDE</a></li>
+                <li><a href="#">COFFEE</a></li>
+                <li><a href="#">DRINK</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">STORE</a>
+              <ul>
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+              <ul>
+                <li><a href="#">BRAND</a></li>
+                <li><a href="#">NOTICE</a></li>
+                <li><a href="#">HISTORY</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">CONTACT</a>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">고객문의</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="qna">
+          <a href="#">qna</a>
+        </div>
+
+        <div class="sub_bg"></div>
+      </header>
+    </div>
+    <!-- 
+    <div class="con1">
+      <div class="banner">
+        <ul>
+          <li>
+            <img src="image/main/banner3.png" alt="배너3" />
+          </li>
+          <li>
+            <img src="image/main/banner2.png" alt="배너2" />
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div>
+            <img src="image/main/banner3.png" alt="배너3" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <img src="image/main/banner2.png" alt="배너2" />
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <section class="sec1">
+      <h2>MENU</h2>
+      <div class="tab">
+        <div class="tab_title">
+          <ul>
+            <li><a href="#">NEW</a></li>
+            <li><a href="#" class="on">eggcellent's COICE</a></li>
+            <li><a href="#">SANDWICH</a></li>
+            <li><a href="#">SIDE</a></li>
+            <li><a href="#">COFFEE</a></li>
+            <li><a href="#">DRINK</a></li>
+          </ul>
+        </div>
+        <div class="tab_content">
+          <div>
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="image/main/bulgogibbqegg.png" alt="메뉴1"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="image/main/avocadoegg.png" alt="메뉴2"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="image/main/tomatoegg.png" alt="메뉴3"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="image/main/shrimpchiliegg.png" alt="메뉴4"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="image/main/garlicsausageegg.png" alt="메뉴5"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sec2">
+      <div class="brand">
+        <p>
+          <strong>The Basics</strong> are<br />
+          <strong>Everything</strong>
+        </p>
+
+        <div class="txt1">
+          <p>
+            <strong>기본이 모든 것이다</strong>
+            <br />
+            <br />
+
+            <span>
+              에그셀런트는 기본이 모든 것이<br />
+              뿌리가 되어 샌드위치에 대한 생각이<br />
+              다릅니다.
+              <br />
+              <br />
+              무항생제, 동물복지, HACCP인증마크가<br />
+              보증하는 프리미엄 유정란만을 엄격하게<br />
+              사용하여 맛있고 건강한 한 끼를 요리합니다.
+              <br />
+              <br />
+              매일 아침 건강하고 행복한 닭이 낳은 계란과<br />
+              신선한 수제 샌드위치로<br />
+              오늘도 행복한 맛을 드립니다.
+            </span>
+          </p>
+
+          <div class="brand_story">
+            <a href="#">brand_story</a>
+          </div>
+        </div>
+
+        <div class="brand_bg">
+          <img src="./image/main/brand_bg.png" alt="브랜드배경이미지" />
+        </div>
+        <div class="brand_img">
+          <img src="./image/main/brand_bread.png" alt="빵이미지" />
+          <img src="./image/main/brand_egg.png" alt="달걀이미지" />
+        </div>
+      </div>
+    </div>
+
+    <div class="sec3">
+      <div class="sec3_header">
+        <p>
+          <strong>FOLLOW US</strong><br /><br /><br /><br />
+          <span
+            ><i class="fab fa-instagram"></i>
+            @eggcellent_eat
+          </span>
+        </p>
+      </div>
+      <div class="sec3_img">
+        <ul class="insta_img">
+          <li class="insta_img1">
+            <a href="#"
+              ><img src="./image/main/insta_1_1.png" alt="인스타이미지1"
+            /></a>
+          </li>
+          <li class="insta_img2">
+            <a href="#"
+              ><img src="./image/main/insta_6_6.png" alt="인스타이미지2"
+            /></a>
+          </li>
+          <li class="insta_img3">
+            <a href="#"
+              ><img src="./image/main/insta_3_3.png" alt="인스타이미지3"
+            /></a>
+          </li>
+          <li class="insta_img4">
+            <a href="#"
+              ><img src="./image/main/insta_4_4.png" alt="인스타이미지4"
+            /></a>
+          </li>
+          <li class="insta_img5">
+            <a href="#"
+              ><img src="./image/main/insta_5_5.png" alt="인스타이미지5"
+            /></a>
+          </li>
+        </ul>
+
+        <ul class="insta_img">
+          <li class="insta_img6">
+            <a href="#"
+              ><img src="./image/main/insta_1.png" alt="인스타이미지6"
+            /></a>
+          </li>
+          <li class="insta_img7">
+            <a href="#"
+              ><img src="./image/main/insta_2.png" alt="인스타이미지6"
+            /></a>
+          </li>
+          <li class="insta_img8">
+            <a href="#"
+              ><img src="./image/main/insta_3.png" alt="인스타이미지6"
+            /></a>
+          </li>
+          <li class="insta_img9">
+            <a href="#"
+              ><img src="./image/main/insta_4.png" alt="인스타이미지6"
+            /></a>
+          </li>
+          <li class="insta_img10">
+            <a href="#"
+              ><img src="./image/main/insta_5.png" alt="인스타이미지6"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec4">
+      <div class="quickmenu">
+        <div class="quick1">
+          <a href="#" id="back_to_top0">
+            <img src="./image/common/franchise_icon.png" alt="퀵메뉴1" />
+          </a>
+        </div>
+        <div class="quick2">
+          <a href="#" id="back_to_top">
+            <img src="./image/common/top_icon.png" alt="퀵메뉴2" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer_wrap fixed clear">
+        <div class="footer_logo">
+          <a href="index.html"
+            ><img src="./image/main/f-logo.png" alt="푸터로고"
+          /></a>
+        </div>
+        <div class="footer_center">
+          <div class="guide">
+            <ul class="clear">
+              <li><a href="#">고객문의</a></li>
+              <li><a href="#">창업문의</a></li>
+              <li><a href="#">개인정보취급방침</a></li>
+            </ul>
+          </div>
+          <div class="footer_text">
+            <p>
+              주식회사 다이닝팩토리<br />
+              서울특별시 강남구 강남대로 122길 15, 6F (논현동, 상당빌딩)<br />
+              02-3452-3442<br />
+              Copyright&copy;DINING FACTORY. &nbsp; All Right Reserved.
+            </p>
+          </div>
+        </div>
+        <div class="footer_right">
+          <div class="sns">
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

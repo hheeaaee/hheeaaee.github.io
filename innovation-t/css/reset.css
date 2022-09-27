@@ -1,0 +1,86 @@
+@charset "utf-8";
+* {
+    margin:0;
+    padding:0;
+}
+html, body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height:1;
+    color:#262626;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+}
+input, textarea, button {
+    font:14px 'Noto Sans KR', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:inherit;
+    font-weight:normal;
+}
+ul, ol, li {
+    list-style:none;
+}
+img, fieldset, input {
+    border:none;
+    vertical-align:top;
+}
+a {
+    text-decoration:none;
+    color:#393939;
+}
+input::placeholder, textarea::placeholder {
+    color:#939393;
+    font-weight:300;
+}
+
+.clear:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+.hide { /* 텍스트를 나타나지 않게함 */
+    height:0;
+    font-size:1px;
+    overflow:hidden;
+}
+.fixed {
+    width: 100%;
+    margin:0 auto;
+}
+legend{
+    display: none;
+}
+label, input, button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  .swiper-container {
+    height: 100%;
+    position: relative;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }

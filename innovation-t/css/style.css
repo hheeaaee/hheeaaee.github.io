@@ -1,0 +1,348 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: relative;
+}
+header{
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+    position: fixed;
+    left: 5%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header .logo a img{
+    width: 180px;
+}
+
+.menu a{
+    display: block;
+}
+.menu a strong{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: #fff;
+    vertical-align: middle;
+}
+.menu a img{
+    vertical-align: middle;
+    width: 32px;
+}
+
+/* 슬라이드 버튼 */
+.swiper-button-next,
+.swiper-button-prev{
+    width: 130px;
+    height: 80px;
+  }
+  .swiper-button-next span,
+  .swiper-button-prev span{
+    display: block;
+    width: 2px;
+    height: 50%;
+    background: #fff;
+    position: absolute;
+    transition: all 0.3s;
+  }
+  .swiper-button-next span:nth-child(1){
+    left: 70%;
+    top: 0;
+    transform-origin: 100% 100%;
+  }
+  .swiper-button-next span:nth-child(2){
+    left: 70%;
+    bottom: 1px;
+    transform-origin: 0 0;
+  }
+  .swiper-button-prev span:nth-child(1){
+    right: 70%;
+    top: 0;
+    transform-origin: 100% 100%;
+  }
+  .swiper-button-prev span:nth-child(2){
+    right: 70%;
+    bottom: 1px;
+    transform-origin: 0 0;
+  }
+  .swiper-button-next em,
+  .swiper-button-prev em{
+    font-style: normal;
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .swiper-button-next em{
+    left: 0;
+  }
+  .swiper-button-prev em{
+    right: 0;
+  }
+  
+/* 버튼호버시 */
+.swiper-button-next:hover span:nth-child(1){
+    transform: rotate(-45deg);
+}
+.swiper-button-next:hover span:nth-child(2){
+    transform: rotate(45deg);
+}
+.swiper-button-prev:hover span:nth-child(1){
+    transform: rotate(45deg);
+  }
+  .swiper-button-prev:hover span:nth-child(2){
+    transform: rotate(-45deg);
+  }
+
+/* 슬라이드 이미지 */
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#slide1{
+    background-image: url(../images/slide1.png);
+}
+#slide2{
+    background-image: url(../images/slide2.png);
+}
+#slide3{
+    background-image: url(../images/slide3.png);
+}
+
+/* 메인 텍스트 */
+.slide_text{
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+.slide_text .title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+.slide_text .sub_title{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+/* 링크 텍스트 */
+.link{
+    position: absolute;
+    bottom: 150px;
+}
+.link a{
+    color: #fff;
+    margin-bottom: 2px;
+    font-size: 20px;
+    animation: ani 4s infinite;
+}
+.link:after{
+    content: '';
+    width: 1px;
+    height: 500%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+    animation: ani2 4s infinite;
+}
+
+@keyframes ani {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes ani2 {
+    0%{
+        height: 500%;
+        opacity: 1;
+    }
+    50%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: 500%;
+        opacity: 1;
+    }
+}
+
+/* 공지사항 영역 */
+.notice{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notice h4{
+    margin-right: 60px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+}
+.notice ul{
+    margin-top: 20px;
+    margin-top: 165px;
+}
+.notice ul li{
+    margin-bottom: 30px;
+}
+.notice ul li a{
+    font-size: 16px;
+    color: #fff;
+}
+.notice h4:before{
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+}
+
+/* 푸터 영역 */
+footer{
+    width: 100%;
+}
+.footer{
+    width: 90%;
+    padding: 100px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.ft_right a img{
+    margin-bottom: 20px;
+}
+.ft_right p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+.ft_right p:nth-child(3){
+    display: inline-block;
+}
+.ft_right p:nth-child(4){
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+.ft_right span{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+
+}
+.ft_left button{
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    color: #979797;
+}
+
+/* 메뉴 영역 - 추가 */
+.menu_bar{
+    position: fixed;
+    top: 0;
+    right: -664px;
+    height: 100%;
+    width: 664px;
+    background: #333;
+    z-index: 999999;
+    transition: 0.6s all;
+    opacity: 0;
+}
+.menu_bar .cancel{
+    display: block;
+    text-align: right;
+}
+.menu_bar > .cancel > img{
+    margin: 30px;
+    width: 60px;
+    height: 60px;
+}
+.menu_bar .menu_list li{
+    margin: 60px 0;
+    text-align: center;
+}
+.menu_bar .menu_list li:nth-child(1){
+    margin-top: 30px;
+}
+.menu_bar .menu_list li a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+}
+
+/* 메뉴 호버시 */
+.menu_bar .menu_list li a:before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #AF1E2D;
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    z-index: -1;
+}
+.menu_bar .menu_list li a:hover:before{
+    width: 110%;
+}
+.menu_bar .cb{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    color: #ccc;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: bold;
+}
+.menu_bar .cb:hover{
+    color: #fff;
+}
+.menu_bar .sns_wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: 30px auto;
+}
+.menu_bar .sns_wrap li a img{
+    width: 25px;
+    height: 25px;
+}
+.menu_bar .sns_wrap li:hover a img{
+    filter: brightness(1.6);
+}
+

@@ -1,7 +1,104 @@
 @charset "UTF-8";
-
 .wrap{
     max-width: 400px;
     margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
 }
+
 img{ width: 100%;}
+
+/* main */
+.main{
+    margin-bottom: 80px;
+}
+
+/* date */
+.date{
+    margin-bottom: 70px;
+}
+.date_top{
+    font-family: 'BookkMyungjo-Bd';
+    display: inline-block;
+    padding: 0.9em 2.3em;
+    border: 1px solid #99d0ff;   
+    border-radius: 60px / 23px;
+    font-size: 11px;
+    background-color: transparent;
+    color: #99d0ff;
+    margin-bottom: 8px;
+}
+
+/* invite_card */
+.invite_card{
+    max-width: 264px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* comment */
+.comment{
+    margin-bottom: 40px;
+}
+
+/* name */
+.name{
+    margin-bottom: 70px;
+}
+.groom_name{
+    margin-bottom: 25px;
+}
+.fwb{
+    font-weight: bold;
+}
+
+/* picture */
+
+/* parents_comment */
+.parents_comment p{
+    margin-bottom: 10px;
+}
+
+.groom_parents{
+    margin-bottom: 70px;
+}
+
+.parents_comment{
+    background-color: #99d0ff;
+    padding: 80px 0;
+    color: #121212;
+}
+
+/* video */
+.video-container {
+  background-color: #121212;    
+  padding: 3rem 2rem;        
+  display: flex;             
+  justify-content: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  /* padding-bottom: 42.5%; */
+  padding-bottom: 80%;      
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* we_comment */
+.we_comment{
+    background-color: #fff;
+}
+.bride_comment{
+    margin-bottom: 50px;
+}

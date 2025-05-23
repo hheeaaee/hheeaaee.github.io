@@ -34,7 +34,7 @@ function shareKakao() {
   Kakao.Share.sendDefault({
     objectType: 'feed',
     content: {
-      title: '재진 & 정은, 결혼 소식을 전합니다 💍',
+      title: '성훈 & 희애, 결혼 소식을 전합니다 💍',
       description: '2025.06.28 SAT',
       imageUrl: 'https://hheeaaee.github.io/sunghunheeae/image/kakaothumb.jpg', // 공유 이미지
       link: {

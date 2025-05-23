@@ -53,3 +53,28 @@ function shareKakao() {
     ]
   });
 }
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", function () {
+  const audio = document.getElementById("bgm");
+  const icon = document.getElementById("sound-icon");
+
+  audio.volume = 1;
+  audio.playbackRate = 0.8;
+  audio.play().catch(() => {
+    console.log("자동재생 제한: 사용자의 인터랙션 필요");
+  });
+
+  document.getElementById("music-toggle").addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      icon.src = "image/sound-on.png";
+    } else {
+      audio.pause();
+      icon.src = "image/sound-off.png";
+    }
+  });
+});

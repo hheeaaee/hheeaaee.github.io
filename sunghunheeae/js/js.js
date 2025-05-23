@@ -36,7 +36,7 @@ function shareKakao() {
     content: {
       title: '재진 & 정은, 결혼 소식을 전합니다 💍',
       description: '2025.06.28 SAT',
-      imageUrl: 'https://hheeaaee.github.io/sunghunheeae/image/ogthumb.jpg', // 공유 이미지
+      imageUrl: 'https://hheeaaee.github.io/sunghunheeae/image/kakaothumb.jpg', // 공유 이미지
       link: {
         mobileWebUrl: window.location.href,
         webUrl: window.location.href
@@ -44,7 +44,7 @@ function shareKakao() {
     },
     buttons: [
       {
-        title: '청첩장 보기',
+        title: '알림장 보기',
         link: {
           mobileWebUrl: window.location.href,
           webUrl: window.location.href

@@ -8,16 +8,7 @@
 
 img{ width: 100%;}
 
-/* main */
-.main{
-    margin-bottom: 80px;
-}
-
-/* date */
-.date{
-    margin-bottom: 70px;
-}
-.date_top{
+.oval{
     font-family: 'BookkMyungjo-Bd';
     display: inline-block;
     padding: 0.9em 2.3em;
@@ -27,6 +18,23 @@ img{ width: 100%;}
     background-color: transparent;
     color: #99d0ff;
     margin-bottom: 8px;
+}
+
+.fwb{
+    font-weight: bold;
+}
+
+/* main */
+.main{
+    margin-bottom: 80px;
+}
+
+/* date */
+.date{
+    margin-bottom: 70px;
+}
+.date_top.oval{
+
 }
 
 /* invite_card */
@@ -48,9 +56,7 @@ img{ width: 100%;}
 .groom_name{
     margin-bottom: 25px;
 }
-.fwb{
-    font-weight: bold;
-}
+
 
 /* picture */
 
@@ -64,12 +70,12 @@ img{ width: 100%;}
 }
 
 .parents_comment{
-    background-color: #99d0ff;
+    background-color: #a6d5ff;
     padding: 80px 0;
     color: #121212;
 }
 
-
+/* video */
 .video-thumbnail {
   width: 100%;
   height: auto;
@@ -105,13 +111,13 @@ img{ width: 100%;}
   position: relative;
   width: 100%;
   max-width: 400px;
-  height: auto; /* 자동 높이 */
+  height: auto;
   cursor: pointer;
 }
 
 .video-wrapper iframe {
   width: 100%;
-  height: 225px; /* iframe도 명확하게 높이 지정 */
+  height: 225px;
   display: block;
 }
 .video-thumbnail {
@@ -126,4 +132,141 @@ img{ width: 100%;}
 }
 .bride_comment{
     margin-bottom: 50px;
+}
+
+/* lightgallery */
+#lightgallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#lightgallery a {
+  aspect-ratio: 1 / 1;   
+  overflow: hidden;
+  display: block;
+}
+
+#lightgallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  cursor: pointer;
+
+}
+
+#lightgallery img:hover {
+}
+
+/* calrendar */
+.calrendar{
+    background-color: #181818;
+
+}
+
+/* about */
+.about{
+    /* background-color: #dceeff; */
+    background-color: #fff;
+    padding: 50px 0;
+    color: #121212;
+    font-family: 'BookkMyungjo-Bd';
+}
+
+.about_top.oval{
+    background-color: #99d0ff;
+    color: #121212;
+    font-size: 12px;
+}
+.qna1-1{
+    color: #1f7ed1;
+    margin-bottom: 20px;
+}
+.about_img{
+    margin-bottom: 30px;
+
+}
+.qna1-2 p:nth-child(4){
+    margin-bottom: 10px;
+}
+.qna1-2 p:nth-child(7){
+    margin-bottom: 10px;
+}
+
+/* heart */
+.heart{
+    background-color: #dceeff;
+    padding: 50px 10px;
+     color: #121212;
+}
+
+.heart_top.oval{
+    background-color: #99d0ff;
+    color: #121212;
+    margin-bottom: 40px;
+    font-size: 12px;
+}
+.heart h4{
+    text-align-last: left;
+    padding: 12px;
+    border-bottom: 1px solid #121212;
+    font-size: 16px;
+}
+
+.account-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.account-box p {
+  margin: 0;
+  flex: 1; 
+  text-align: left;
+}
+
+.account-box button {
+  background: #1f7ed1;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* share */
+.share-buttons {
+  padding: 40px 0 70px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.share-buttons button {
+  width: 220px;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.share-buttons .kakao {
+  background-color: #ffe812;
+  color: #000;
+}
+
+.share-buttons .copy-link {
+  background-color: #000;
+  color: #fff;
+}
+
+.share-buttons .credit {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
 }

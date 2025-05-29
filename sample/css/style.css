@@ -244,8 +244,11 @@ img{ width: 100%;}
 }
 .invite_txt p:last-child{
 }
+.invite-box{ 
+  text-align: left;
+}
 
-.invite-box p {
+.invite-box span {
   margin: 0;
   flex: 1; 
   text-align: left;
@@ -263,6 +266,7 @@ img{ width: 100%;}
  .emoji-safe {
       font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
  }
+
 
 /* heart */
 .heart{

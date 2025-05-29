@@ -1,0 +1,350 @@
+@charset "UTF-8";
+.wrap{
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+img{ width: 100%;}
+
+.oval{
+    font-family: 'BookkMyungjo-Bd';
+    display: inline-block;
+    padding: 0.9em 2.3em;
+    border: 1px solid #99d0ff;   
+    border-radius: 60px / 23px;
+    font-size: 11px;
+    background-color: transparent;
+    color: #99d0ff;
+    margin-bottom: 8px;
+}
+
+.fwb{
+    font-weight: bold;
+}
+
+/* main */
+.main{
+    margin-bottom: 80px;
+    position: relative;
+}
+
+
+/* music */
+#music-toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#music-toggle img {
+  width: 40px;
+  height: 40px;
+}
+
+/* date */
+.date{
+    margin-bottom: 70px;
+}
+.date_top.oval{
+
+}
+
+/* invite_card */
+.invite_card{
+    max-width: 264px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* comment */
+.comment{
+    margin-bottom: 40px;
+}
+
+/* name */
+.name{
+    margin-bottom: 70px;
+}
+.groom_name{
+    margin-bottom: 25px;
+}
+
+
+/* picture */
+
+/* parents_comment */
+.parents_comment p{
+    margin-bottom: 10px;
+}
+
+.groom_parents{
+    margin-bottom: 70px;
+}
+
+.parents_comment{
+    background-color: #a6d5ff;
+    padding: 80px 0;
+    color: #121212;
+}
+
+/* video */
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-button-css {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.play-button-css::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  cursor: pointer;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 225px;
+  display: block;
+}
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* we_comment */
+.we_comment{
+    background-color: #fff;
+}
+.bride_comment{
+    margin-bottom: 50px;
+}
+
+/* lightgallery */
+#lightgallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#lightgallery a {
+  aspect-ratio: 1 / 1;   
+  overflow: hidden;
+  display: block;
+}
+
+#lightgallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  cursor: pointer;
+
+}
+
+#lightgallery img:hover {
+}
+
+/* calendar */
+.calendar{
+    background-color: #181818;
+
+}
+
+/* about */
+.about{
+    /* background-color: #dceeff; */
+    background-color: #fff;
+    padding: 50px 0;
+    color: #121212;
+    font-family: 'BookkMyungjo-Bd';
+}
+
+.about_top.oval{
+    background-color: #99d0ff;
+    color: #121212;
+    font-size: 12px;
+}
+.qna1-1{
+    color: #1f7ed1;
+    margin-bottom: 20px;
+}
+.about_img{
+    margin-bottom: 30px;
+
+}
+.qna1-2 p:nth-child(3){
+    margin-bottom: 10px;
+}
+.qna1-2 p:nth-child(5){
+    margin-bottom: 10px;
+}
+.qna1-2 p:nth-child(7){
+    margin-bottom: 10px;
+}
+
+/* invite */
+.invite{
+    background-color: #fff;
+    padding: 50px 10px;
+    color: #121212;
+    border-top: 1px solid #121212;
+    
+}
+.invite_top.oval{
+    background-color: #99d0ff;
+    color: #121212;
+    font-size: 12px;
+}
+.invite-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.invite_txt{
+    margin-bottom: 10px;
+}
+.invite_txt p:first-child{
+    margin-bottom: 10px;
+}
+.invite_txt p:last-child{
+}
+
+.invite-box p {
+  margin: 0;
+  flex: 1; 
+  text-align: left;
+}
+
+.invite-box button {
+  background: #1f7ed1;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+ .emoji-safe {
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+ }
+
+/* heart */
+.heart{
+    background-color: #dceeff;
+    padding: 50px 10px;
+     color: #121212;
+}
+
+.heart_top.oval{
+    background-color: #99d0ff;
+    color: #121212;
+    margin-bottom: 40px;
+    font-size: 12px;
+}
+.heart h4{
+    text-align-last: left;
+    padding: 12px;
+    border-bottom: 1px solid #121212;
+    font-size: 16px;
+}
+
+.account-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.account-box p {
+  margin: 0;
+  flex: 1; 
+  text-align: left;
+}
+
+.account-box button {
+  background: #1f7ed1;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* share */
+.share-buttons {
+  padding: 40px 0 70px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.share-buttons button {
+  width: 220px;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.share-buttons .kakao {
+  background-color: #ffe812;
+  color: #000;
+}
+
+.share-buttons .copy-link {
+  background-color: #000;
+  color: #fff;
+}
+
+.share-buttons .credit {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
+}
+
+.share-buttons .ps {
+  margin-top: 40px;
+  font-size: 8px;
+  color: #ababab;
+}

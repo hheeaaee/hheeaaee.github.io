@@ -55,6 +55,11 @@ img{ width: 100%;}
 .date_top.oval{
 
 }
+.date_txt p:last-child{
+    font-size: 12px;
+    margin-top: 8px;
+    color: #929292;
+}
 
 /* invite_card */
 .invite_card{

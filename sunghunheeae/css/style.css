@@ -55,6 +55,11 @@ img{ width: 100%;}
 .date_top.oval{
 
 }
+.date_txt p:last-child{
+    font-size: 12px;
+    margin-top: 8px;
+    color: #929292;
+}
 
 /* invite_card */
 .invite_card{
@@ -213,6 +218,60 @@ img{ width: 100%;}
 .qna1-2 p:nth-child(7){
     margin-bottom: 10px;
 }
+
+/* invite */
+.invite{
+    background-color: #fff;
+    padding: 50px 10px;
+    color: #121212;
+    border-top: 1px solid #121212;
+    
+}
+.invite_top.oval{
+    background-color: #99d0ff;
+    color: #121212;
+    font-size: 12px;
+}
+.invite-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.invite_txt{
+    margin-bottom: 10px;
+}
+.invite_txt p:first-child{
+    margin-bottom: 10px;
+}
+.invite_txt p:last-child{
+}
+.invite-box{ 
+  text-align: left;
+}
+
+.invite-box span {
+  margin: 0;
+  flex: 1; 
+  text-align: left;
+}
+
+.invite-box button {
+  background: #1f7ed1;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+ .emoji-safe {
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+ }
+
 
 /* heart */
 .heart{

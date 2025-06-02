@@ -30,6 +30,12 @@ function copyWeddingUrl() {
     .catch(() => alert("복사에 실패했습니다 😢"));
 }
 
+function copyToAdress(text) {
+  navigator.clipboard.writeText(text)
+    .then(() => alert("주소가 복사되었습니다!"))
+    .catch(() => alert("복사에 실패했습니다 😢"));
+}
+
 function shareKakao() {
   Kakao.Share.sendDefault({
     objectType: 'feed',

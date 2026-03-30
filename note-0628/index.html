@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성훈 & 희애, 결혼 소식을 전합니다 💍</title>
+    <script src="https://kit.fontawesome.com/c5fe816e88.js" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="image/favicon.png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/js.js"></script>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="성훈 & 희애, 결혼 소식을 전합니다 💍" />
+    <meta property="og:description" content="2025.06.28 SAT" />
+    <meta property="og:keyword" content="sunghunheeae" />
+    <meta property="og:image" content="https://hheeaaee.github.io/sunghunheeae/image/ogthumb.jpg" />
+    <meta property="og:url" content="http://hheeaaee.github.io/sunghunheeae" />
+
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+    
+    <!-- LightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+    <!-- Kakao SDK -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('475e29b890552106e8769a431afb878e'); // ✅ 네 키로 초기화
+        console.log(Kakao.isInitialized()); // true면 정상
+    </script>           
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="main_img">
+                <img src="./image/main_img.jpg" alt="main_img">
+            </div>
+            <button id="music-toggle">
+                <img id="sound-icon" src="image/sound-on.png" alt="sound-icon">
+            </button>
+            <audio id="bgm" autoplay loop>
+                <source src="audio/chopin_nocturne_louder_plus.mp3" type="audio/mp3">
+                브라우저가 오디오를 지원하지 않습니다.
+            </audio>
+        </div>
+        <div class="date">
+            <div class="date_top oval">20250628</div>
+            <div class="date_txt">
+                <p>2025.06.28 SAT 11:40AM</p>
+                <p>스튜디오 더룸</p>
+                <p>studio the room</p>
+                <p>*가족과 함께 조용히 예식만 진행합니다.</p>
+            </div>
+        </div>
+        <div class="invite_card">
+            <img src="./image/invite_card.jpg" alt="invite_card">
+        </div>
+        <div class="comment">
+            <img src="./image/comment.png" alt="comment">
+        </div>
+        <div class="name">
+            <div class="groom_name">
+                <p class="fwb">Groom</p>
+                <p>Jo Sung Hun</p>
+            </div>
+            <div class="bride_name">
+                <p class="fwb">bride</p>
+                <p>Kim Hee Ae</p>
+            </div>
+        </div>
+        <div class="picture">
+            <img src="./image/picture.jpg" alt="picture">
+        </div>
+        <div class="parents_comment">
+            <div class="groom_parents">
+                <p class="fwb">Groom's Parents</p>
+                <div class="groom_comment_img">
+                    <img src="./image/groom_parents.png" alt="groom_parents_comment">
+                </div>
+            </div>
+            <div class="bride_parents">
+                <p class="fwb">Bride's Parents</p>
+                <div class="groom_comment_img">
+                    <img src="./image/bride_parents.png" alt="bride_parents_comment">
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <div class="video-wrapper" id="videoBox" onclick="playVideo()">
+                 <img src="image/play_video.jpg" alt="play_video" class="video-thumbnail">
+                <div class="play-button-css"></div>
+            </div>
+        </div>
+       
+        <div class="we_comment">
+            <div class="bride_comment">
+                <img src="./image/bride_comment.jpg" alt="bride_comment">
+            </div>
+            <div class="groom_comment">
+                <img src="./image/groom_comment.jpg" alt="bride_comment">
+            </div>
+        </div>
+        <div id="lightgallery" class="lightgallery">
+            <a href="./image/img1.jpg"><img src="./image/img1.jpg"></a>
+            <a href="./image/img2.jpg"><img src="./image/img2.jpg"></a>
+            <a href="./image/img3.jpg"><img src="./image/img3.jpg"></a>
+            <a href="./image/img4.jpg"><img src="./image/img4.jpg"></a>
+            <a href="./image/img5.jpg"><img src="./image/img5.jpg"></a>
+            <a href="./image/img6.jpg"><img src="./image/img6.jpg"></a>
+            <a href="./image/img7.jpg"><img src="./image/img7.jpg"></a>
+            <a href="./image/img8.jpg"><img src="./image/img8.jpg"></a>
+            <a href="./image/img9.jpg"><img src="./image/img9.jpg"></a>
+            <a href="./image/img10.jpg"><img src="./image/img10.jpg"></a>
+            <a href="./image/img11.jpg"><img src="./image/img11.jpg"></a>
+            <a href="./image/img12.jpg"><img src="./image/img12.jpg"></a>
+        </div>
+        <div class="calendar">
+            <img src="./image/calendar.png" alt="calendar">
+        </div>
+        <div class="about">
+            <div class="about_top oval">about us</div>
+            <div class="qna1-1">스몰웨딩을 선택한 이유?</div>
+            <div class="qna1-2">
+                <p>저희는 결혼이라는 시작을,</p>
+                <p>가장 사랑하는 사람들과 하나님 앞에서 드리는</p>
+                <p>예배로 준비하고 싶었습니다.</p>
+                <p>겉모습보다 마음을 나누는 순간이 더 소중했기에,</p>
+                <p>저희는 스몰웨딩을 선택하게 되었습니다.</p>
+                <p>무엇보다도 이해해주시고 </p>
+                <p>함께해주신 양가 가족 덕분입니다.</p>
+                <p>조용하지만 깊이 있는 이 시작을</p>
+                <p>양가 가족과 함께 나누고 싶습니다.</p>
+            </div>
+        </div>
+        <!-- <div class="invite">
+            <div class="invite_top oval">피로연 안내</div>
+            <div class="invite_txt">
+                <p>조용히 결혼의 기쁨을 나누고자 <br>부안에서 감사의 자리를 마련하였습니다.</p>
+                <p>2025년 7월 11일 토요일 저녁 7시, K컨벤션웨딩홀</p>
+            </div>
+            <div class="invite-box">
+                <div class="invite-box_txt">
+                    <span class="emoji-safe">&#128330;</span> 
+                    <span><strong>K컨벤션웨딩홀</strong><br>전북 부안군 동진면 고마제로 11</span>
+                </div>
+                <button onclick="copyToAdress('전북 부안군 동진면 고마제로 11')">복사하기</button>
+            </div>
+        </div> -->
+        <div class="heart">
+            <div class="heart_top oval">마음 전하실 곳</div>
+            <div class="to_groom_parents">
+                <h4>🤵🏻 신랑측 계좌번호</h4>
+                <div class="account-box">
+                    <p>농협 352 1915 0535 13<br>김영숙</p>
+                    <button onclick="copyToClipboard('농협 352 1915 0535 13 김영숙')">복사하기</button>
+                </div>
+                <div class="account-box">
+                    <p>산림조합 303 14 0033077<br>조성훈</p>
+                    <button onclick="copyToClipboard('산림조합 303 14 0033077 조성훈')">복사하기</button>
+                </div>
+            </div>
+            <div class="to_bride_parents">
+                <h4>👰🏻‍♀ 신부측 계좌번호</h4>
+                <div class="account-box">
+                    <p>농협 821089 52 007510<br>김임순</p>
+                    <button onclick="copyToClipboard('농협 821089 52 007510 김임순')">복사하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="share-buttons">
+            <button class="kakao" onclick="shareKakao()">카카오톡 공유하기</button>
+            <button class="copy-link" onclick="copyWeddingUrl()">청첩장 주소 복사하기</button>
+            <p class="credit">ⓒwinterstudio</p>
+            <p class="ps">*참고: 꽃님과 햇님은 희애, 성훈의 애칭입니다.</p>
+        </div>
+
+
+
+</body>
+
+</html>
